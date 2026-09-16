@@ -4,47 +4,44 @@ import { TESTIMONIALS } from "@/lib/content";
 
 export default function TestimonialsSection() {
   return (
-    <section
-      className="py-32 lg:py-40 relative overflow-hidden"
-      style={{ background: "rgba(90,112,64,0.06)" }}
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+    <section className="py-40 lg:py-56 bg-[#F5EFE3]">
+      <div className="max-w-5xl mx-auto px-6 lg:px-12">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, margin: "-80px" }}
-          className="max-w-2xl mb-12"
+          viewport={{ once: true }}
+          className="text-xs tracking-[0.35em] uppercase text-[#6B7560] mb-16 text-center"
         >
-          <h2
-            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[0.02em] text-[#2A3E1A]"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-          >
-            What Coachella Valley residents say.
-          </h2>
-        </motion.div>
+          What Coachella Valley Residents Say
+        </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="space-y-24">
           {TESTIMONIALS.map((t, i) => (
             <motion.div
               key={t.name}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.9, delay: i * 0.1 }}
               viewport={{ once: true, margin: "-80px" }}
-              className="bg-[#F5EFE3] border border-[#D8D0C4] p-8"
+              className="border-t border-[#D8D0C4] pt-12"
             >
               <blockquote
-                className="text-base italic leading-[1.8] text-[#1A1A14]"
+                className="text-3xl md:text-4xl font-bold leading-[1.25] text-[#2A3E1A]"
                 style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
-              <div className="mt-6 pt-6 border-t border-[#D8D0C4]">
-                <p className="text-sm font-semibold text-[#2A3E1A]">{t.name}</p>
-                <p className="text-xs text-[#6B7560] tracking-[0.05em] mt-1">
-                  {t.city}
-                </p>
+              <div className="mt-8 flex items-center gap-4">
+                <div className="w-8 h-px bg-[#2A3E1A]" />
+                <div>
+                  <p className="text-sm font-semibold text-[#2A3E1A] tracking-[0.05em]">
+                    {t.name}
+                  </p>
+                  <p className="text-xs text-[#6B7560] tracking-[0.1em] uppercase mt-0.5">
+                    {t.city}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}

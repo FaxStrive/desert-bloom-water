@@ -13,9 +13,9 @@ export default function HeroSection() {
   return (
     <section
       ref={ref}
-      className="relative h-screen w-full overflow-hidden flex items-end pb-24"
+      className="relative h-screen w-full overflow-hidden flex items-center justify-center"
     >
-      {/* Video is PRIMARY - always the background */}
+      {/* Video background with parallax */}
       <motion.div className="absolute inset-0 z-0" style={{ y: videoY }}>
         <video
           autoPlay
@@ -28,33 +28,49 @@ export default function HeroSection() {
           <source src="/videos/hero-desert.mp4" type="video/mp4" />
         </video>
       </motion.div>
-      {/* Gradient overlay ON TOP of video for text legibility only */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[rgba(26,40,16,0.15)] via-transparent to-[rgba(26,40,16,0.45)]" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
-        <motion.h1
-          initial={{ opacity: 0, filter: "blur(8px)", y: 20 }}
-          animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-[clamp(3rem,8vw,7rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#F5EFE3] max-w-3xl"
-          style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-        >
-          Your Water,
-          <br />
-          Elevated.
-        </motion.h1>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 z-[1] bg-black/58" />
+
+      {/* Centered content: wordmark + headline + one CTA */}
+      <div className="relative z-10 text-center px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
+          <h1
+            className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-widest uppercase text-white leading-none"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+          >
+            Desert
+            <br />
+            Bloom
+            <br />
+            Water
+          </h1>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.9, delay: 0.9 }}
+          className="mt-8 text-xs tracking-[0.35em] uppercase text-white/60"
+        >
+          Pure Water for the Coachella Valley
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1.3 }}
           className="mt-10"
         >
           <a
             href="#contact"
-            className="text-sm font-semibold px-6 py-3 bg-[#F5EFE3] text-[#2A3E1A] hover:bg-[#E8703A] hover:text-[#F5EFE3] transition-colors duration-400 tracking-wide text-center"
+            className="inline-block text-xs font-semibold tracking-widest uppercase px-10 py-4 border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300"
           >
-            Schedule a complimentary consultation
+            Schedule a Consultation
           </a>
         </motion.div>
       </div>

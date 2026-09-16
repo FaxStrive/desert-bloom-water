@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F5EFE3;
+  --color-forest: #2A3E1A;
+  --color-navy: #1A4475;
+  --color-terracotta: #E8703A;
+  --color-sage: #5A7040;
+  --color-near-black: #1A1A14;
+  --color-muted: #6B7560;
+  --color-forest-dark: #1A2810;
+  --color-border: #D8D0C4;
+
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-jakarta), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "Courier New", monospace;
+
+  --radius: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-full: 9999px;
+}
+
+:root {
+  --background: #F5EFE3;
+  --foreground: #1A1A14;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-playfair), Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-jakarta), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@keyframes ken-burns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes blur-in-up {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}

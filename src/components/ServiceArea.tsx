@@ -22,7 +22,7 @@ export default function ServiceArea() {
             >
               <h2
                 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[0.02em] text-[#2A3E1A]"
-                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
               >
                 Coachella Valley, in its entirety.
               </h2>
@@ -81,7 +81,7 @@ export default function ServiceArea() {
               <div className="absolute bottom-6 left-6 right-6">
                 <p
                   className="text-[#F5EFE3] text-lg font-bold leading-tight"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+                  style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
                 >
                   Greater Palm Springs
                 </p>

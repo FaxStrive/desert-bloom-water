@@ -18,10 +18,10 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 h-16 px-6 lg:px-12 flex items-center justify-between transition-all duration-500 ease-out ${
+      className={`fixed top-0 left-0 right-0 z-50 h-12 px-6 lg:px-12 flex items-center justify-between transition-all duration-500 ease-out ${
         scrolled
-          ? "bg-[#F5EFE3]/95 backdrop-blur-sm shadow-[0_1px_0_0_#D8D0C4] text-[#2A3E1A]"
-          : "bg-transparent text-[#F5EFE3]"
+          ? "bg-black/80 backdrop-blur-md text-white"
+          : "bg-transparent text-white"
       }`}
     >
       {/* Logo */}
@@ -34,11 +34,10 @@ export default function Navigation() {
           className="object-contain"
         />
         <span
-          className={`font-heading text-sm font-bold tracking-tight hidden md:block ${
-            scrolled ? "text-[#2A3E1A]" : "text-[#F5EFE3]"
-          }`}
+          className="text-xs font-light tracking-[0.25em] uppercase hidden md:block text-white/80"
+          style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
         >
-          DESERT BLOOM
+          Desert Bloom
         </span>
       </Link>
 
@@ -60,7 +59,7 @@ export default function Navigation() {
           </button>
           {servicesOpen && (
             <div
-              className="absolute top-full left-0 mt-1 min-w-56 bg-[#F5EFE3] shadow-md border border-[#D8D0C4] py-2"
+              className="absolute top-full left-0 mt-1 min-w-56 bg-black/90 backdrop-blur-md border border-white/10 py-2"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
@@ -68,7 +67,7 @@ export default function Navigation() {
                 <a
                   key={svc.href}
                   href={svc.href}
-                  className="block px-4 py-2 text-[#2A3E1A] text-sm hover:bg-[#2A3E1A] hover:text-[#F5EFE3] transition-colors"
+                  className="block px-4 py-2 text-white/70 text-xs tracking-[0.1em] hover:text-white transition-colors"
                 >
                   {svc.name}
                 </a>
@@ -99,11 +98,7 @@ export default function Navigation() {
       {/* Phone CTA */}
       <a
         href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
-        className={`text-sm font-semibold px-4 py-2 border transition-all duration-400 tracking-wide ${
-          scrolled
-            ? "border-[#2A3E1A] text-[#2A3E1A] hover:bg-[#2A3E1A] hover:text-[#F5EFE3]"
-            : "border-[#F5EFE3] text-[#F5EFE3] hover:bg-[#F5EFE3] hover:text-[#2A3E1A]"
-        }`}
+        className="text-xs font-light tracking-[0.12em] text-white/70 hover:text-white transition-colors duration-300 hidden md:block"
       >
         {PHONE}
       </a>

@@ -31,8 +31,8 @@ export default function EditorialSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.25, 0.46, 0.45, 0.94] }}
           viewport={{ once: true }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.08] text-white"
-          style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+          className="text-5xl md:text-6xl lg:text-7xl font-light leading-[1.2] tracking-[0.15em] uppercase text-white"
+          style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
         >
           Hard water.
           <br />

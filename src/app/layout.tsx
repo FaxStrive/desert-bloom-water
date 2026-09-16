@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  weight: ["300", "400"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${jakarta.variable} ${jetbrains.variable}`}
+      className={`${cormorant.variable} ${jakarta.variable} ${jetbrains.variable}`}
     >
       <body className="bg-[#F5EFE3] text-[#1A1A14] antialiased">
         {children}

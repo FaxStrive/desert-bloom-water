@@ -16,7 +16,7 @@ export default function EducationBlock() {
           >
             <h2
               className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[0.02em] text-[#2A3E1A] mb-6"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
             >
               What Most Water Filters Miss
             </h2>

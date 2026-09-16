@@ -30,7 +30,7 @@ export default function MoreServices() {
             </div>
             <h3
               className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold tracking-[0.02em] text-[#2A3E1A] mb-4"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
             >
               Better water. Better skin. Better mornings.
             </h3>
@@ -72,7 +72,7 @@ export default function MoreServices() {
             </div>
             <h3
               className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold tracking-[0.02em] text-[#2A3E1A] mb-4"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
             >
               Water that makes better beef.
             </h3>

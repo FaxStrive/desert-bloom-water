@@ -39,7 +39,7 @@ export default function K8FeatureCards() {
         >
           <h2
             className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[0.02em] text-[#2A3E1A]"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
           >
             Engineered for the long term.
           </h2>
@@ -67,7 +67,7 @@ export default function K8FeatureCards() {
               <div className="p-6">
                 <h3
                   className="text-xl font-bold tracking-[-0.01em] text-[#2A3E1A] mb-3"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+                  style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
                 >
                   {card.heading}
                 </h3>

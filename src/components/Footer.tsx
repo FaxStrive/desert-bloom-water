@@ -18,7 +18,7 @@ export default function Footer() {
             />
             <p
               className="text-sm italic text-[#6B7560]"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+              style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
             >
               Ionized water for the desert lifestyle.
             </p>

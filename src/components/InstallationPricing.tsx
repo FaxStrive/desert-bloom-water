@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const STEPS = [
   {
@@ -67,6 +68,42 @@ export default function InstallationPricing() {
               </p>
             </motion.div>
           ))}
+        </div>
+
+        {/* Installation photos */}
+        <div className="grid grid-cols-2 gap-4 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-60px" }}
+            className="relative aspect-[16/9] overflow-hidden"
+          >
+            <Image
+              src="/images/install/install-05.jpg"
+              alt="K8 installation process in a desert home kitchen"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 50vw, 33vw"
+              style={{ filter: "brightness(0.85) contrast(1.1) saturate(0.7)" }}
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            className="relative aspect-[16/9] overflow-hidden"
+          >
+            <Image
+              src="/images/lifestyle/kitchen-water.jpg"
+              alt="Clean water flowing in a modern kitchen"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 50vw, 33vw"
+              style={{ filter: "brightness(0.85) contrast(1.1) saturate(0.75)" }}
+            />
+          </motion.div>
         </div>
 
         {/* Pricing block */}

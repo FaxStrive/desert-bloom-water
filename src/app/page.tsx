@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
+import StatBar from "@/components/StatBar";
 import EducationBlock from "@/components/EducationBlock";
 import WaterQualityQuiz from "@/components/WaterQualityQuiz";
 import K8FeatureCards from "@/components/K8FeatureCards";
@@ -15,6 +16,7 @@ export default function Home() {
     <main>
       <Navigation />
       <HeroSection />
+      <StatBar />
       <EducationBlock />
       <section className="py-32 lg:py-40 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">

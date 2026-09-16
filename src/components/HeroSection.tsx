@@ -42,51 +42,28 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xs tracking-[0.12em] uppercase text-[#F5EFE3]/70 mb-4"
-        >
-          COACHELLA VALLEY WATER IONIZATION SPECIALIST
-        </motion.p>
         <motion.h1
           initial={{ opacity: 0, filter: "blur(8px)", y: 20 }}
           animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-[clamp(3rem,8vw,7rem)] font-bold leading-[1.05] tracking-[-0.04em] text-[#F5EFE3] max-w-3xl"
+          className="text-[clamp(3rem,8vw,7rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[#F5EFE3] max-w-3xl"
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
         >
           Your Water,
           <br />
           Elevated.
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-base lg:text-lg leading-[1.7] text-[#F5EFE3]/80 max-w-xl mt-6 mb-8"
-        >
-          The Enagic K8 combines certified filtration with electrolysis -- backed
-          by 50+ years of research. Professional installation starts at $299.
-        </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="mt-10"
         >
           <a
             href="#contact"
             className="text-sm font-semibold px-6 py-3 bg-[#F5EFE3] text-[#2A3E1A] hover:bg-[#E8703A] hover:text-[#F5EFE3] transition-colors duration-400 tracking-wide text-center"
           >
             Schedule a complimentary consultation
-          </a>
-          <a
-            href="#k8-system"
-            className="text-sm font-semibold px-6 py-3 border border-[#F5EFE3] text-[#F5EFE3] hover:bg-[#F5EFE3] hover:text-[#2A3E1A] transition-colors duration-400 tracking-wide text-center"
-          >
-            Explore the K8 system
           </a>
         </motion.div>
       </div>

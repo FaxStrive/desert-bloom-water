@@ -6,7 +6,7 @@ export default function ServiceArea() {
   return (
     <section
       id="service-area"
-      className="py-24 lg:py-32 relative overflow-hidden bg-[#F5EFE3]"
+      className="py-32 lg:py-40 relative overflow-hidden bg-[#F5EFE3]"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
@@ -16,11 +16,8 @@ export default function ServiceArea() {
           viewport={{ once: true, margin: "-80px" }}
           className="max-w-2xl mx-auto text-center mb-16"
         >
-          <p className="text-xs tracking-[0.12em] uppercase text-[#E8703A] font-medium mb-3">
-            WHERE WE WORK
-          </p>
           <h2
-            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[-0.02em] text-[#2A3E1A]"
+            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[0.02em] text-[#2A3E1A]"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           >
             Coachella Valley, in its entirety.

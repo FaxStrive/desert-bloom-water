@@ -4,12 +4,9 @@ import Image from "next/image";
 
 export default function MoreServices() {
   return (
-    <section className="py-24 lg:py-32 bg-[#F5EFE3] border-t border-[#D8D0C4]">
+    <section className="py-32 lg:py-40 bg-[#F5EFE3] border-t border-[#D8D0C4]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <p className="text-xs tracking-[0.12em] uppercase text-[#E8703A] font-medium mb-12">
-          MORE FROM DESERT BLOOM
-        </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Shower Filter */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -28,13 +25,11 @@ export default function MoreServices() {
                 fill
                 className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                style={{ filter: "brightness(0.85) contrast(1.1) saturate(0.7)" }}
               />
             </div>
-            <p className="text-xs tracking-[0.1em] uppercase text-[#E8703A] font-medium mb-2">
-              WHOLE-BODY WELLNESS
-            </p>
             <h3
-              className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold tracking-[-0.01em] text-[#2A3E1A] mb-4"
+              className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold tracking-[0.02em] text-[#2A3E1A] mb-4"
               style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               Better water. Better skin. Better mornings.
@@ -72,13 +67,11 @@ export default function MoreServices() {
                 fill
                 className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                style={{ filter: "brightness(0.85) contrast(1.1) saturate(0.7)" }}
               />
             </div>
-            <p className="text-xs tracking-[0.1em] uppercase text-[#E8703A] font-medium mb-2">
-              THE SURPRISING ONE
-            </p>
             <h3
-              className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold tracking-[-0.01em] text-[#2A3E1A] mb-4"
+              className="text-[clamp(1.4rem,2.5vw,2rem)] font-bold tracking-[0.02em] text-[#2A3E1A] mb-4"
               style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
             >
               Water that makes better beef.

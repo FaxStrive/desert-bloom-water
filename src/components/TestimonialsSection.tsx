@@ -5,7 +5,7 @@ import { TESTIMONIALS } from "@/lib/content";
 export default function TestimonialsSection() {
   return (
     <section
-      className="py-24 lg:py-32 relative overflow-hidden"
+      className="py-32 lg:py-40 relative overflow-hidden"
       style={{ background: "rgba(90,112,64,0.06)" }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -16,18 +16,15 @@ export default function TestimonialsSection() {
           viewport={{ once: true, margin: "-80px" }}
           className="max-w-2xl mb-12"
         >
-          <p className="text-xs tracking-[0.12em] uppercase text-[#E8703A] font-medium mb-3">
-            WHAT RESIDENTS SAY
-          </p>
           <h2
-            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[-0.02em] text-[#2A3E1A]"
+            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[0.02em] text-[#2A3E1A]"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           >
             What Coachella Valley residents say.
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {TESTIMONIALS.map((t, i) => (
             <motion.div
               key={t.name}

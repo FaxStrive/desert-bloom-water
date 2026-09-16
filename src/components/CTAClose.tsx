@@ -28,11 +28,8 @@ export default function CTAClose() {
         viewport={{ once: true, margin: "-100px" }}
         className="relative z-10 max-w-3xl mx-auto px-6 text-center"
       >
-        <p className="text-xs tracking-[0.12em] uppercase font-medium text-[#E8703A] mb-6">
-          DESERT BLOOM WATER SOLUTIONS
-        </p>
         <h2
-          className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1.1] tracking-[-0.03em] text-[#F5EFE3] mb-6"
+          className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1.1] tracking-[0.02em] text-[#F5EFE3] mb-6"
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
         >
           Ready for better water?

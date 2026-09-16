@@ -28,7 +28,7 @@ const CARDS = [
 
 export default function K8FeatureCards() {
   return (
-    <section className="py-24 lg:py-32 bg-[#F5EFE3] border-t border-[#D8D0C4]">
+    <section className="py-32 lg:py-40 bg-[#F5EFE3] border-t border-[#D8D0C4]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
@@ -37,17 +37,14 @@ export default function K8FeatureCards() {
           viewport={{ once: true, margin: "-80px" }}
           className="text-center mb-16"
         >
-          <p className="text-xs tracking-[0.12em] uppercase text-[#E8703A] font-medium mb-3">
-            THE K8 SYSTEM
-          </p>
           <h2
-            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[-0.02em] text-[#2A3E1A]"
+            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[0.02em] text-[#2A3E1A]"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           >
             Engineered for the long term.
           </h2>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {CARDS.map((card, i) => (
             <motion.div
               key={card.heading}
@@ -64,12 +61,10 @@ export default function K8FeatureCards() {
                   fill
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  style={{ filter: "brightness(0.85) contrast(1.1) saturate(0.7)" }}
                 />
               </div>
               <div className="p-6">
-                <p className="text-xs tracking-[0.1em] uppercase text-[#E8703A] font-medium mb-2">
-                  {card.eyebrow}
-                </p>
                 <h3
                   className="text-xl font-bold tracking-[-0.01em] text-[#2A3E1A] mb-3"
                   style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}

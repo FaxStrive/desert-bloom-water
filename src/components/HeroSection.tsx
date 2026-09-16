@@ -15,30 +15,21 @@ export default function HeroSection() {
       ref={ref}
       className="relative h-screen w-full overflow-hidden flex items-end pb-24"
     >
-      {/* Background: video with CSS gradient fallback */}
+      {/* Video is PRIMARY - always the background */}
       <motion.div className="absolute inset-0 z-0" style={{ y: videoY }}>
-        {/* CSS desert gradient background (always visible as fallback) */}
-        <div
-          className="absolute inset-0 scale-110"
-          style={{
-            background:
-              "linear-gradient(160deg, #2A3E1A 0%, #4a6830 25%, #8B6914 55%, #C47A3A 80%, #1A2810 100%)",
-          }}
-        />
-        {/* Video overlay - loads on top when available */}
         <video
           autoPlay
           muted
           loop
           playsInline
           poster="/videos/hero-desert-poster.jpg"
-          className="absolute inset-0 w-full h-full object-cover scale-110"
+          className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/videos/hero-desert.mp4" type="video/mp4" />
         </video>
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(26,40,16,0.15)_0%,rgba(26,40,16,0.65)_100%)]" />
       </motion.div>
+      {/* Gradient overlay ON TOP of video for text legibility only */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[rgba(26,40,16,0.15)] via-transparent to-[rgba(26,40,16,0.45)]" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">

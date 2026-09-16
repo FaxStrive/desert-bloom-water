@@ -48,12 +48,10 @@ export default function EditorialSection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-10 text-lg leading-[1.85] text-white/70 max-w-2xl"
+          className="mt-10 text-lg leading-[1.85] text-white/75 max-w-xl"
         >
-          Coachella Valley tap water ranks among the hardest in the United States.
-          The Enagic K8 restructures that water through electrolysis, producing
-          alkaline drinking water, beauty water, powerful cleaning water, and more
-          from one compact countertop unit.
+          The Enagic K8 transforms your tap into alkaline drinking water,
+          beauty water, and powerful cleaning water from one countertop unit.
         </motion.p>
 
         <motion.div

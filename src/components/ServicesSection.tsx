@@ -6,15 +6,15 @@ const SERVICES = [
   {
     eyebrow: "K8 IONIZER",
     heading: "Eight Plates. Infinite Applications.",
-    body: "Eight platinum-coated titanium plates produce alkaline drinking water, beauty water, powerful cleaning water and more. NSF/ANSI certified. One device serves your whole home.",
-    img: "/images/install/install-01.jpg",
-    alt: "Enagic K8 ionizer installed in a Coachella Valley kitchen",
+    body: "Eight platinum-coated titanium plates produce alkaline drinking water, beauty water, and powerful cleaning water from a single countertop unit.",
+    img: "/images/product/k8-ionizer.jpg",
+    alt: "Enagic K8 ionizer unit",
     layout: "left" as const,
   },
   {
     eyebrow: "SHOWER FILTER",
     heading: "Softer Water. Better Skin.",
-    body: "Desert municipal water contains chlorine your skin absorbs directly. A Desert Bloom shower filter removes it at the source, leaving noticeably softer water on skin and hair. Installed in under an hour.",
+    body: "Desert municipal water contains chlorine your skin absorbs directly. A Desert Bloom shower filter removes it at the source, leaving noticeably softer water on skin and hair.",
     img: "/images/product/shower-filter.jpg",
     alt: "Shower filter for home installation",
     layout: "right" as const,
@@ -22,9 +22,9 @@ const SERVICES = [
   {
     eyebrow: "PROFESSIONAL INSTALLATION",
     heading: "Installation Included.",
-    body: "Our certified installer comes to your home, sets up the system in 1 to 2 hours, and walks you through every setting before leaving. Serving all of the Coachella Valley.",
-    img: "/images/install/install-05.jpg",
-    alt: "Professional K8 water system installation",
+    body: "Our installer comes to your home, sets up the system in under two hours, and walks you through every setting.",
+    img: "/images/lifestyle/palm-springs-desert.jpg",
+    alt: "Coachella Valley desert at dusk",
     layout: "full" as const,
   },
 ];
@@ -71,7 +71,7 @@ export default function ServicesSection() {
             <h3 className="text-4xl md:text-5xl font-light tracking-[0.2em] uppercase text-white leading-[1.2] max-w-lg">
               {SERVICES[0].heading}
             </h3>
-            <p className="mt-8 text-base text-white/55 leading-[1.85] max-w-md font-light">
+            <p className="mt-10 text-base text-white/75 leading-[1.85] max-w-md font-light">
               {SERVICES[0].body}
             </p>
             <a
@@ -126,7 +126,7 @@ export default function ServicesSection() {
             <h3 className="text-4xl md:text-5xl font-light tracking-[0.2em] uppercase text-white leading-[1.2] max-w-lg">
               {SERVICES[1].heading}
             </h3>
-            <p className="mt-8 text-base text-white/55 leading-[1.85] max-w-md font-light">
+            <p className="mt-10 text-base text-white/75 leading-[1.85] max-w-md font-light">
               {SERVICES[1].body}
             </p>
             <a

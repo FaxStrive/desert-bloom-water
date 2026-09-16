@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
               <div className="mt-10 flex items-center gap-4">
                 <div className="w-8 h-px bg-white/30" />
                 <div>
-                  <p className="text-xs font-light tracking-[0.2em] uppercase text-white/60">
+                  <p className="text-xs font-light tracking-[0.2em] uppercase text-white/75">
                     {t.name}
                   </p>
                   <p className="text-xs text-white/35 tracking-[0.15em] uppercase mt-1">

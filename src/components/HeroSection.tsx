@@ -48,7 +48,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Centered content: headline + one outlined CTA */}
-      <div className="relative z-10 text-center px-6">
+      <div className="relative z-10 text-center px-6 pt-32 pb-24 md:pt-0 md:pb-0 flex flex-col items-center justify-center min-h-[60vh] md:min-h-0">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,13 +65,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
-          className="mt-16"
+          className="mt-16 md:mt-20"
         >
           <a
             href="#contact"
             className="inline-block text-xs font-light tracking-[0.3em] uppercase px-12 py-5 border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-400"
           >
-            Schedule a Consultation
+            Begin
           </a>
         </motion.div>
       </div>

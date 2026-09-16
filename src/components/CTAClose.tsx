@@ -31,18 +31,16 @@ export default function CTAClose() {
         <h2
           className="text-[clamp(2.5rem,6vw,5rem)] font-light leading-[1.2] tracking-[0.2em] uppercase text-white mb-8"
         >
-          Ready for better water?
+          Better water starts here.
         </h2>
-        <p className="text-base font-light leading-[1.85] text-white/50 max-w-xl mx-auto mb-14">
-          Schedule a complimentary consultation. We assess your home, recommend
-          the right system, and answer every question. No pressure, no
-          commitment.
+        <p className="text-base font-light leading-[1.85] text-white/70 max-w-md mx-auto mb-16">
+          Call us. We come to you, assess your home, and install the right system.
         </p>
         <a
           href={`tel:${PHONE.replace(/[^0-9]/g, "")}`}
           className="inline-block text-xs font-light tracking-[0.3em] uppercase px-12 py-5 border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-400"
         >
-          Schedule Your Consultation
+          Call Now
         </a>
         <div className="mt-10">
           <a

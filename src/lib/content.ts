@@ -23,20 +23,10 @@ export const STATS = [
   { number: "$299", label: "Professional Installation" },
 ];
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "The K8 system changed how my family drinks water. The difference in taste is immediate.",
-    name: "Maria R.",
-    city: "Palm Springs",
-  },
-  {
-    quote:
-      "No pressure, no guesswork. They answered every question before I committed to anything.",
-    name: "James T.",
-    city: "Palm Desert",
-  },
-];
+// No verified testimonials are on file for this client. Do not add
+// placeholder or invented quotes here; TestimonialsSection is not
+// rendered on the page until real, client-supplied testimonials exist.
+export const TESTIMONIALS: { quote: string; name: string; city: string }[] = [];
 
 export const SERVICE_CITIES = [
   "Palm Springs",

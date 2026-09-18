@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title:
     "Water Ionization & Filtration | Desert Bloom Water Solutions | Palm Springs CA",
   description:
-    "Enagic K8 ionizer installation in the Coachella Valley. 8 platinum-coated plates, 5-year warranty, $299 installation. Serving Palm Springs, Palm Desert, La Quinta and 11 surrounding communities. Call (760) 812-9119.",
+    "Enagic Kangen water ionizer installation in the Coachella Valley. Pay in full or finance. Serving Palm Springs, Palm Desert, La Quinta and surrounding communities. Call (760) 812-9119.",
 };
 
 export default function RootLayout({

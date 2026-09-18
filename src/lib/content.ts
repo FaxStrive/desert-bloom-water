@@ -23,38 +23,10 @@ export const STATS = [
   { number: "$299", label: "Professional Installation" },
 ];
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "The water quality in the Coachella Valley has always been a concern for our family. The K8 system has made a noticeable difference in the water we drink and cook with every day.",
-    name: "Maria R.",
-    city: "Palm Springs",
-  },
-  {
-    quote:
-      "Professional installation, straightforward process. The Desert Bloom team answered every question I had before I committed to anything.",
-    name: "James T.",
-    city: "Palm Desert",
-  },
-  {
-    quote:
-      "I was skeptical at first, but the free consultation gave me enough information to make an informed decision. No pressure at all.",
-    name: "Sandra K.",
-    city: "Rancho Mirage",
-  },
-  {
-    quote:
-      "Having filtered and ionized water straight from the tap has simplified our household routine considerably. The system is quiet and unobtrusive.",
-    name: "David M.",
-    city: "La Quinta",
-  },
-  {
-    quote:
-      "The installation took about two hours and everything was explained clearly. The $299 installation price was exactly as quoted.",
-    name: "Patricia L.",
-    city: "Cathedral City",
-  },
-];
+// No verified testimonials are on file for this client. Do not add
+// placeholder or invented quotes here; TestimonialsSection is not
+// rendered on the page until real, client-supplied testimonials exist.
+export const TESTIMONIALS: { quote: string; name: string; city: string }[] = [];
 
 export const SERVICE_CITIES = [
   "Palm Springs",

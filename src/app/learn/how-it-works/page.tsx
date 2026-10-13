@@ -54,8 +54,7 @@ export default function HowItWorksPage() {
         text="A short look at water running from a tap into a glass."
         videoSrc="/video/learn-tap.mp4"
         posterSrc="/images/stock/learn-tap-poster.jpg"
-        posterAlt="Water running from a tap, reference footage"
-        creditTag="Reference footage"
+        posterAlt="Water running from a tap"
       />
 
       <ClosingCta

@@ -4,7 +4,6 @@ import {
   WhySystems,
   Systems,
   StatOverImage,
-  RuledList,
   WaterHook,
   ArchVideoFeature,
   Process,
@@ -116,21 +115,8 @@ export default function HomePage() {
         imageAlt="Water pouring into a glass"
         stat="5 years"
         statLabel="warranty on the K8"
-        maxHeight={460}
+        maxHeight={320}
         focus="50% 55%"
-      />
-
-      <RuledList
-        tone="alt"
-        eyebrow="THE CONVERSATION"
-        headline={<>What is <em>on the table</em></>}
-        intro="Before any decision, this is what you get from the conversation."
-        items={[
-          { title: "A personal conversation about your water." },
-          { title: "A K8 with a 5-year warranty." },
-          { title: "Financing, available and reviewed with you personally." },
-          { title: "Installation, arranged afterward." },
-        ]}
       />
 
       <WaterHook
@@ -246,7 +232,7 @@ export default function HomePage() {
         tone="light"
         eyebrow="THE VALLEY"
         headline={<>Across the <em>Coachella Valley</em>.</>}
-        body="Desert Bloom serves Greater Palm Springs and the surrounding communities in Riverside County. The full list follows."
+        body="Desert Bloom serves Greater Palm Springs and the surrounding communities in Riverside County."
         imageSrc="/images/stock/header-tumbler-wood.jpg"
         imageAlt="A glass of water on a wooden table"
       />

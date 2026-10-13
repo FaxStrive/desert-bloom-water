@@ -180,7 +180,7 @@ export default function Bleed({
 
   if (to === "viewport") {
     return (
-      <section id={anchorId} className={`section${toneClass} overflow-hidden`} style={{ paddingLeft: 0, paddingRight: 0 }} data-shape="bleed" data-bleed-to="viewport">
+      <section id={anchorId} className={`section${toneClass} overflow-hidden`} style={{ paddingLeft: 0, paddingRight: 0 }} data-shape="bleed" data-bleed-to="viewport" data-density="dense">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-0">
           <Figure
             src={imageSrc}

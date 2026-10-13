@@ -103,6 +103,7 @@ export default function HomePage() {
               "Eight platinum-coated titanium plates, advanced filtration and multiple water options in one unit. Backed by a 5-year warranty.",
             imageSrc: "/images/client/origin-k8.jpg",
             imageAlt: "Close view of the K8 display and hose",
+            points: ["8 platinum-coated titanium plates", "Advanced filtration", "Multiple water options", "5-year warranty"],
             ctaLabel: "How the K8 works",
             ctaHref: "/learn/how-it-works",
           },
@@ -111,12 +112,12 @@ export default function HomePage() {
 
       <StatOverImage
         fullBleed
-        imageSrc="/images/stock/header-pour-glass.jpg"
-        imageAlt="Water pouring into a glass"
+        imageSrc="/images/stock/band-faucet-marble.jpg"
+        imageAlt="A chrome tap over a sink"
         stat="5 years"
         statLabel="warranty on the K8"
         maxHeight={320}
-        focus="50% 55%"
+        focus="50% 45%"
       />
 
       <WaterHook
@@ -125,8 +126,8 @@ export default function HomePage() {
         body="Water is not the same in every neighborhood or every house. The pipes, the supply and the age of a home all play a part. Before you think about any system, it helps to understand your own water. That is the first thing Kara talks through with you, and the guide below is a good place to start."
         linkLabel="Read the water guide"
         linkHref="/learn/your-water"
-        imageSrc="/images/stock/header-water-macro.jpg"
-        imageAlt="Water pouring into a glass, close view"
+        imageSrc="/images/stock/header-faucet-granite.jpg"
+        imageAlt="Water running from a chrome faucet into a kitchen sink"
         pictureAspect="4/3"
       />
 
@@ -197,8 +198,8 @@ export default function HomePage() {
         headline={<>Premium, <span style={{ whiteSpace: "nowrap" }}>education-first</span>, focused on quality, technology, and wellness.</>}
         anchor="bottom"
         tint="shadow"
-        strength={0.9}
-        minHeight={440}
+        strength={1}
+        minHeight={480}
       >
         <p>
           <a href="/contact" className="font-semibold" style={{ color: "var(--color-accent-text-on-dark)" }}>
@@ -216,8 +217,8 @@ export default function HomePage() {
         body="Kara Contreras meets each person personally. She starts with your water and the options available, answers your questions, and then reviews pricing and financing with you. You are not handed a brochure and left to decide alone."
         ctaLabel="Send a message"
         ctaHref="/contact"
-        imageSrc="/images/stock/header-kitchen-island.jpg"
-        imageAlt="A bright kitchen island in a desert home"
+        imageSrc="/images/client/service-k8-front.jpg"
+        imageAlt="The K8 beside an iridescent glass and a houseplant"
         pictureAspect="4/3"
       />
 
@@ -229,12 +230,12 @@ export default function HomePage() {
         eyebrow="THE VALLEY"
         headline={<>Across the <em>Coachella Valley</em>.</>}
         body="Desert Bloom serves Greater Palm Springs and the surrounding communities in Riverside County, from Palm Springs to Indio Hills."
-        imageSrc="/images/stock/header-tumbler-wood.jpg"
-        imageAlt="A glass of water on a wooden table"
+        imageSrc="/images/client/gallery-k8-counter.jpg"
+        imageAlt="The K8 on a kitchen counter beside a black faucet"
       />
 
       <ServiceAreas
-        variant="cards"
+        variant="columns"
         tone="alt"
         eyebrow="WHERE WE SERVE"
         headline="Thirteen communities."
@@ -249,8 +250,8 @@ export default function HomePage() {
 
       <ClosingCta
         variant="split"
-        posterSrc="/images/stock/stat-glass-table.jpg"
-        posterAlt="A glass of water on a table"
+        posterSrc="/images/stock/header-kitchen-island.jpg"
+        posterAlt="A bright kitchen with a black faucet over the island sink"
         mediaFlush
         headline="Start with a conversation about your water."
         subhead="Installation $299. Financing is available."

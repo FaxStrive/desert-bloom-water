@@ -49,6 +49,8 @@ export interface SystemItem {
   imageAlt?: string;
   /** picker variant: CSS object-position for the picture. */
   imagePosition?: string;
+  /** alternating-rows: short fact list under the description. */
+  points?: string[];
   ctaLabel?: string;
   ctaHref?: string;
 }
@@ -237,6 +239,15 @@ export default function Systems({
                     <p className="mb-8 max-w-md" style={{ color: "var(--color-ink-muted)" }}>
                       {system.description}
                     </p>
+                  ) : null}
+                  {system.points && system.points.length > 0 ? (
+                    <ul className="mb-8 max-w-md" style={{ borderTop: "1px solid var(--color-border)" }}>
+                      {system.points.map((point) => (
+                        <li key={point} className="py-3 font-medium" style={{ borderBottom: "1px solid var(--color-border)" }}>
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
                   ) : null}
                   {system.ctaLabel && system.ctaHref ? (
                     <a href={system.ctaHref} className="btn btn-ghost btn-sweep">

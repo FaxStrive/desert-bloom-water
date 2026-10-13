@@ -53,7 +53,7 @@ export default function ArchVideoFeature({
     <section className={`section${tone === "alt" ? " on-alt" : ""}`} data-section="arch-video-feature">
       <div className="shell grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
         <div className={`lg:col-span-5 ${mediaFirst ? "lg:order-1" : "lg:order-2"}`}>
-          <div className="mx-auto w-full" style={{ maxWidth: 420 }}>
+          <div className="mx-auto w-full" style={{ maxWidth: 300 }}>
             <ShapedVideo shape="arch" videoSrc={videoSrc} posterSrc={posterSrc} posterAlt={posterAlt} />
             {creditTag ? (
               <p className="mt-3 text-sm" style={{ color: "var(--color-ink-muted)" }}>

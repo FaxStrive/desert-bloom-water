@@ -42,10 +42,6 @@ const faqItems = [
   },
   { question: "Is there a warranty?", answer: "Yes. The K8 comes with a 5-year warranty." },
   {
-    question: "How does financing work?",
-    answer: "Financing is available. Kara reviews it with you personally, and no rate or term is published on this site.",
-  },
-  {
     question: "Where do you install?",
     answer: "In 13 Coachella Valley communities, from Palm Springs to Indio Hills. The full list is below.",
   },
@@ -121,7 +117,7 @@ export default function HomePage() {
         stat="5 years"
         statLabel="warranty on the K8"
         eyebrow="Reference image"
-        maxHeight={420}
+        maxHeight={360}
       />
 
       <InfoBand
@@ -146,7 +142,7 @@ export default function HomePage() {
         linkHref="/learn/your-water"
         imageSrc="/images/client/install-5.jpg"
         imageAlt="A glass jar of water held up in sunlight on a lawn"
-        pictureAspect="4/5"
+        pictureAspect="1/1"
       />
 
       <ArchSeam into="alt" />
@@ -220,7 +216,7 @@ export default function HomePage() {
         posterAlt="A chrome faucet with a slow drip, reference footage"
         headline="Premium, education-first, focused on quality, technology, and wellness."
         anchor="bottom"
-        minHeight={420}
+        minHeight={360}
       >
         <p>
           <a href="/contact" className="font-semibold" style={{ color: "var(--color-accent-text-on-dark)" }}>

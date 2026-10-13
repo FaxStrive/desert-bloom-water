@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactConversation } from "@/components/sections";
+import OffersTable from "@/components/interactive/OffersTable";
 import { ArchSeam, Bleed } from "@/components/shapes";
 import PageHero from "@/components/PageHero";
 import { PHONE, PHONE_HREF, EMAIL, HOURS } from "@/lib/content";
@@ -53,12 +54,24 @@ export default function ContactPage() {
         ]}
       />
 
-      <ArchSeam into="alt" />
+      <OffersTable
+        headline="Installation and financing"
+        note="Pricing is reviewed with you personally, because it depends on the conversation."
+        columns={{ offer: "Offer", terms: "Terms" }}
+        rows={[
+          { name: "Installation", value: "$299." },
+          { name: "Financing", value: "Available, no rate or term published." },
+        ]}
+        ctaLabel="Book a water conversation"
+        ctaHref="#contact-name"
+      />
+
+      <ArchSeam into="light" />
 
       <Bleed
         side="right"
         fallback="panel"
-        tone="alt"
+        tone="light"
         headline="What happens on the call"
         body="Kara asks about your home and your water. She explains how the K8 works and the options available. She reviews pricing and financing with you."
       />

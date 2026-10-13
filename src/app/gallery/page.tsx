@@ -33,7 +33,7 @@ export default function GalleryPage() {
 
       <section className="section on-alt">
         <div className="shell">
-          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid grid-cols-2 gap-6 lg:grid-cols-5">
             {photos.map((photo) => (
               <li key={photo.src} className="flex flex-col gap-3">
                 <Figure
@@ -41,12 +41,12 @@ export default function GalleryPage() {
                   alt={photo.alt}
                   width={photo.aspect === "4/3" ? 1400 : 800}
                   height={photo.aspect === "4/3" ? 1050 : 1000}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
+                  sizes="(max-width: 1024px) 50vw, 240px"
                   aspect={photo.aspect}
                   wrapperClassName="relative w-full overflow-hidden"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
-                <p className="text-sm" style={{ color: "var(--color-ink-muted)" }}>
+                <p style={{ color: "var(--color-ink-muted)" }}>
                   {photo.caption}
                 </p>
               </li>

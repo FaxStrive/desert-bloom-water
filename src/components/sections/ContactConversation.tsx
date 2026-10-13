@@ -93,7 +93,7 @@ export default function ContactConversation({
         <div className="lg:col-span-7">
           {eyebrow ? <span className="eyebrow mb-4 block">{eyebrow}</span> : null}
           <h2 className="mb-8">{formHeading}</h2>
-          <form onSubmit={onSubmit} noValidate className="flex flex-col gap-6">
+          <form onSubmit={onSubmit} noValidate className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
             {fields.map((field) => (
               <div key={field.key} className="flex flex-col gap-2">
                 <label htmlFor={`contact-${field.key}`} className="text-xs font-medium uppercase tracking-wide" style={{ color: "var(--color-ink-muted)" }}>
@@ -120,14 +120,14 @@ export default function ContactConversation({
                 ) : null}
               </div>
             ))}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 sm:col-span-2">
               <label htmlFor="contact-message" className="text-xs font-medium uppercase tracking-wide" style={{ color: "var(--color-ink-muted)" }}>
                 {labels.message}
               </label>
               <textarea
                 id="contact-message"
                 name="message"
-                rows={4}
+                rows={3}
                 placeholder={placeholders.message}
                 value={values.message}
                 onChange={(event) => set("message", event.target.value)}
@@ -136,11 +136,11 @@ export default function ContactConversation({
               />
             </div>
             {status === "failed" ? (
-              <p role="alert" style={{ color: "var(--color-accent-text)" }}>
+              <p role="alert" className="sm:col-span-2" style={{ color: "var(--color-accent-text)" }}>
                 {errors.send}
               </p>
             ) : null}
-            <div className="flex flex-col items-start gap-3">
+            <div className="flex flex-col items-start gap-3 sm:col-span-2">
               <button type="submit" disabled={status === "submitting"} className="btn btn-primary btn-sweep disabled:opacity-60" data-cta={CTA_ACTION}>
                 <span>{submitLabel}</span>
               </button>

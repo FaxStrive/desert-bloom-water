@@ -56,7 +56,7 @@ export default function ProofBand({ variant, items = [], roomy = false, tone = "
     return (
       <section className="section on-dark" style={{ paddingTop: "clamp(20px, 3vw, 40px)", paddingBottom: "clamp(20px, 3vw, 40px)" }}>
         <div className="shell">
-          <ul className="grid grid-cols-1 divide-y sm:grid-cols-3 sm:divide-x sm:divide-y-0" style={{ borderColor: "rgba(255,255,255,0.16)" }}>
+          <ul className={`grid grid-cols-1 divide-y sm:divide-x sm:divide-y-0 ${items.length === 4 ? "sm:grid-cols-4" : "sm:grid-cols-3"}`} style={{ borderColor: "rgba(255,255,255,0.16)" }}>
             {items.map((item, index) => (
               <li
                 key={`${item.label}-${index}`}

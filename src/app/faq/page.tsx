@@ -22,6 +22,7 @@ const items = [
     question: "Which areas do you serve?",
     answer: "Palm Springs, Cathedral City, Rancho Mirage, Palm Desert, Indian Wells, La Quinta, Indio, Coachella, Desert Hot Springs, Bermuda Dunes, Thousand Palms, Sky Valley and Indio Hills.",
   },
+  { question: "Is the K8 certified?", answer: CERTIFICATION },
   { question: "How do I reach Kara?", answer: `Call ${PHONE}, ${HOURS}, or use the contact form.` },
 ];
 
@@ -40,7 +41,7 @@ export default function FaqPage() {
 
       <ArchSeam into="light" />
 
-      <Bleed side="right" fallback="panel" tone="light" headline="Certification" body={CERTIFICATION} />
+      <Bleed side="right" fallback="panel" tone="light" headline="Reach Kara directly" body={`Call ${PHONE}, ${HOURS}, or use the contact form.`} />
 
       <ClosingCta
         variant="band"

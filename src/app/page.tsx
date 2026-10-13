@@ -16,6 +16,7 @@ import {
 } from "@/components/sections";
 import { OverlapFigure, ArchSeam, Bleed } from "@/components/shapes";
 import { VideoBehindType } from "@/components/video";
+import Figure from "@/components/sections/Figure";
 import JsonLd, { faqSchema } from "@/components/JsonLd";
 import {
   PHONE_HREF,
@@ -33,6 +34,12 @@ export const metadata: Metadata = {
   description:
     "The K8 combines filtration with electrolysis. Talk with Kara about your water, pricing and financing. Serving 13 Coachella Valley communities.",
 };
+
+const strip = [
+  { src: "/images/client/home-strip-1.jpg", alt: "The K8 beside a black faucet on a kitchen counter" },
+  { src: "/images/client/home-strip-2.jpg", alt: "The K8 hose and the front of the unit" },
+  { src: "/images/client/home-strip-3.jpg", alt: "The K8 behind a glass with a houseplant" },
+];
 
 const faqItems = [
   {
@@ -117,7 +124,7 @@ export default function HomePage() {
         stat="5 years"
         statLabel="warranty on the K8"
         eyebrow="Reference image"
-        maxHeight={360}
+        maxHeight={300}
       />
 
       <InfoBand
@@ -142,7 +149,7 @@ export default function HomePage() {
         linkHref="/learn/your-water"
         imageSrc="/images/client/install-5.jpg"
         imageAlt="A glass jar of water held up in sunlight on a lawn"
-        pictureAspect="1/1"
+        pictureAspect="4/3"
       />
 
       <ArchSeam into="alt" />
@@ -151,7 +158,15 @@ export default function HomePage() {
         variant="figure"
         imageSrc="/images/client/install-2.jpg"
         imageAlt="A glass in front of the K8 unit with a houseplant beside it"
-      />
+      >
+        <ul className="mt-3 grid grid-cols-3 gap-1 sm:gap-3 max-sm:[margin-inline:calc(var(--gutter)*-1)]">
+          {strip.map((photo) => (
+            <li key={photo.src}>
+              <Figure src={photo.src} alt={photo.alt} width={320} height={240} sizes="130px" aspect="4/3" wrapperClassName="relative w-full overflow-hidden" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </li>
+          ))}
+        </ul>
+      </OverlapFigure>
 
       <ArchVideoFeature
         tone="alt"
@@ -216,7 +231,7 @@ export default function HomePage() {
         posterAlt="A chrome faucet with a slow drip, reference footage"
         headline="Premium, education-first, focused on quality, technology, and wellness."
         anchor="bottom"
-        minHeight={360}
+        minHeight={320}
       >
         <p>
           <a href="/contact" className="font-semibold" style={{ color: "var(--color-accent-text-on-dark)" }}>
@@ -235,6 +250,9 @@ export default function HomePage() {
         body="Kara Contreras meets each person personally. She starts with your water and the options available, answers your questions, and then reviews pricing and financing with you. You are not handed a brochure and left to decide alone."
         ctaLabel="Send a message"
         ctaHref="/contact"
+        imageSrc="/images/client/origin-k8.jpg"
+        imageAlt="The K8 hose and the front of the unit on a kitchen counter"
+        pictureAspect="4/3"
       />
 
       <Faq headline="Questions people ask first" items={faqItems} />

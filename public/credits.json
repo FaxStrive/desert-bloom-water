@@ -428,6 +428,62 @@
    "describes": "Derived crop of install-3",
    "subject": "equipment",
    "note": "Client photograph, EXIF stripped."
+  },
+  {
+   "file": "/images/client/home-strip-1.jpg",
+   "provider": "client",
+   "origin": "derived-from-client",
+   "originalFilename": "install-3.jpg",
+   "fromLibrary": false,
+   "license": "client-owned",
+   "sourceUrl": "",
+   "owner": "desert-bloom-water-solutions",
+   "usableForOthers": false,
+   "describes": "Derived crop of install-3",
+   "subject": "equipment",
+   "note": "Client photograph, EXIF stripped."
+  },
+  {
+   "file": "/images/client/home-strip-2.jpg",
+   "provider": "client",
+   "origin": "derived-from-client",
+   "originalFilename": "install-4.jpg",
+   "fromLibrary": false,
+   "license": "client-owned",
+   "sourceUrl": "",
+   "owner": "desert-bloom-water-solutions",
+   "usableForOthers": false,
+   "describes": "Derived crop of install-4",
+   "subject": "equipment",
+   "note": "Client photograph, EXIF stripped."
+  },
+  {
+   "file": "/images/client/home-strip-3.jpg",
+   "provider": "client",
+   "origin": "derived-from-client",
+   "originalFilename": "install-2.jpg",
+   "fromLibrary": false,
+   "license": "client-owned",
+   "sourceUrl": "",
+   "owner": "desert-bloom-water-solutions",
+   "usableForOthers": false,
+   "describes": "Derived crop of install-2",
+   "subject": "equipment",
+   "note": "Client photograph, EXIF stripped."
+  },
+  {
+   "file": "/images/client/origin-k8.jpg",
+   "provider": "client",
+   "origin": "derived-from-client",
+   "originalFilename": "install-4.jpg",
+   "fromLibrary": false,
+   "license": "client-owned",
+   "sourceUrl": "",
+   "owner": "desert-bloom-water-solutions",
+   "usableForOthers": false,
+   "describes": "Derived crop of install-4",
+   "subject": "equipment",
+   "note": "Client photograph, EXIF stripped."
   }
  ],
  "client": "desert-bloom-water-solutions"

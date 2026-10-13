@@ -74,6 +74,16 @@ export default function VideoBehindType({
       data-video-treatment="behind-type"
     >
       <div className="absolute inset-0">
+        {/* The poster is always drawn, as the video's own first layer, so the band is a picture
+            before the video starts and under reduced motion; the video plays on top of it. */}
+        <Figure
+          src={posterSrc}
+          alt={posterAlt}
+          fill
+          sizes="100vw"
+          aspect="free"
+          wrapperClassName="absolute inset-0 h-full w-full"
+        />
         {allowVideo && videoSrc ? (
           <video
             className="absolute inset-0 h-full w-full object-cover"
@@ -86,16 +96,7 @@ export default function VideoBehindType({
           >
             <source src={videoSrc} type="video/mp4" />
           </video>
-        ) : (
-          <Figure
-            src={posterSrc}
-            alt={posterAlt}
-            fill
-            sizes="100vw"
-            aspect="free"
-            wrapperClassName="absolute inset-0 h-full w-full"
-          />
-        )}
+        ) : null}
       </div>
       <div
         className="absolute inset-0"

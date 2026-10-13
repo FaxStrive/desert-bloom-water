@@ -1,62 +1,20 @@
-export const SERVICES = [
-  {
-    name: "K8 Ionizer System",
-    href: "#k8-system",
-    description: "Enagic K8 -- 8 platinum-coated titanium plates",
-  },
-  {
-    name: "Shower Filter",
-    href: "#shower-filter",
-    description: "Whole-body wellness filtration",
-  },
-  {
-    name: "Kangen Beef Line",
-    href: "#kangen-beef",
-    description: "Commercial pH water for meat processing",
-  },
-];
+// Shared strings and links. Every string here comes from copy.md or the client's record.
+import { facts } from "@/lib/facts";
 
-export const STATS = [
-  { number: "8", label: "Platinum-Coated Titanium Plates" },
-  { number: "50+", label: "Years of Enagic R&D" },
-  { number: "5-Year", label: "Manufacturer Warranty" },
-  { number: "$299", label: "Professional Installation" },
-];
+export const COMPANY = facts.companyName ?? "Desert Bloom Water Solutions";
+export const PHONE = facts.phone ?? "760-812-9119";
+export const PHONE_HREF = facts.phoneHref ?? "tel:7608129119";
+export const PHONE_LABEL = `Call ${PHONE}`;
+export const EMAIL = facts.email ?? "karancontreras@gmail.com";
+export const HOURS = "Monday to Saturday, 9am to 5pm Pacific";
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "The water quality in the Coachella Valley has always been a concern for our family. The K8 system has made a noticeable difference in the water we drink and cook with every day.",
-    name: "Maria R.",
-    city: "Palm Springs",
-  },
-  {
-    quote:
-      "Professional installation, straightforward process. The Desert Bloom team answered every question I had before I committed to anything.",
-    name: "James T.",
-    city: "Palm Desert",
-  },
-  {
-    quote:
-      "I was skeptical at first, but the free consultation gave me enough information to make an informed decision. No pressure at all.",
-    name: "Sandra K.",
-    city: "Rancho Mirage",
-  },
-  {
-    quote:
-      "Having filtered and ionized water straight from the tap has simplified our household routine considerably. The system is quiet and unobtrusive.",
-    name: "David M.",
-    city: "La Quinta",
-  },
-  {
-    quote:
-      "The installation took about two hours and everything was explained clearly. The $299 installation price was exactly as quoted.",
-    name: "Patricia L.",
-    city: "Cathedral City",
-  },
-];
+export const CTA_LABEL = "Book a water conversation";
+export const CTA_HREF = "/contact";
 
-export const SERVICE_CITIES = [
+export const CERTIFICATION =
+  "Enagic K8 is certified to applicable NSF/ANSI standards and carries applicable certifications for the U.S. market.";
+
+export const CITIES = [
   "Palm Springs",
   "Cathedral City",
   "Rancho Mirage",
@@ -66,11 +24,31 @@ export const SERVICE_CITIES = [
   "Indio",
   "Coachella",
   "Desert Hot Springs",
-  "Bermuda Dunes",
-  "Thousand Palms",
-  "Sky Valley",
-  "Indio Hills",
+];
+export const UNINCORPORATED = ["Bermuda Dunes", "Thousand Palms", "Sky Valley", "Indio Hills"];
+export const ZIPS = [
+  "92201", "92203", "92210", "92211", "92234", "92236", "92240",
+  "92241", "92253", "92260", "92262", "92264", "92270", "92276",
 ];
 
-export const PHONE = "(760) 812-9119";
-export const EMAIL = "karancontreras@gmail.com";
+export const NAV_LINKS = [
+  { href: "/service-areas", label: "Service Area" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
+export const LEARN_LINKS = [
+  { href: "/learn/how-it-works", label: "How it works" },
+  { href: "/services/k8-water-system", label: "The K8" },
+  { href: "/learn/your-water", label: "Your water" },
+];
+export const FOOTER_LINKS = [
+  { href: "/privacy", label: "Privacy" },
+  { href: "/contact", label: "Contact" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/gallery", label: "Gallery" },
+];
+
+export const CLOSING_SUPPORT = {
+  primary: "Pricing and financing reviewed with you",
+  secondary: HOURS,
+};

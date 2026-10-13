@@ -1,0 +1,198 @@
+{
+  "$schema": "../style.schema.json",
+  "style": "elegant-premium",
+  "guide": "style-guide.md",
+  "label": "Elegant premium",
+  "summary": "Serif headings, open leading, thin rules, unhurried motion.",
+  "radius": {
+    "button": "0px",
+    "card": "0px",
+    "media": "0px",
+    "input": "0px",
+    "pill": "0px"
+  },
+  "typography": {
+    "displayFace": {
+      "family": "Playfair Display",
+      "nextFont": "Playfair_Display",
+      "weights": [
+        "400",
+        "500",
+        "600"
+      ]
+    },
+    "bodyFace": {
+      "family": "Inter",
+      "nextFont": "Inter",
+      "weights": [
+        "300",
+        "400",
+        "500"
+      ]
+    },
+    "scale": {
+      "desktop": {
+        "h1_size": {
+          "target": 64,
+          "min": 56,
+          "max": 80
+        },
+        "h1_weight": {
+          "target": 400,
+          "min": 350,
+          "max": 500
+        },
+        "h1_tracking": {
+          "target": -0.025,
+          "min": -0.03,
+          "max": 0
+        },
+        "h1_leading": {
+          "target": 1.12,
+          "min": 1.02,
+          "max": 1.22
+        },
+        "h2_size": {
+          "target": 44,
+          "min": 38,
+          "max": 56
+        },
+        "section_padding": {
+          "target": 120,
+          "min": 120,
+          "max": 208
+        },
+        "container_width": {
+          "target": 1160,
+          "min": 1100,
+          "max": 1400
+        }
+      },
+      "mobile": {
+        "h1_size": {
+          "target": 38,
+          "min": 36,
+          "max": 44
+        },
+        "h1_weight": {
+          "target": 400,
+          "min": 350,
+          "max": 500
+        },
+        "h1_tracking": {
+          "target": -0.018,
+          "min": -0.025,
+          "max": 0.005
+        },
+        "h1_leading": {
+          "target": 1.18,
+          "min": 1.08,
+          "max": 1.3
+        },
+        "h2_size": {
+          "target": 30,
+          "min": 28,
+          "max": 38
+        },
+        "section_padding": {
+          "target": 56,
+          "min": 56,
+          "max": 104
+        }
+      }
+    },
+    "bodyLeading": 1.8
+  },
+  "divider": "straight",
+  "rhythm": [
+    "light",
+    "tint",
+    "light",
+    "tint",
+    "deep",
+    "light"
+  ],
+  "motion": {
+    "intensity": "measured",
+    "fast": "180ms",
+    "base": "300ms",
+    "slow": "620ms",
+    "revealTravel": "16px",
+    "lift": "3px",
+    "sweep": "flow-sweep"
+  },
+  "image": {
+    "treatment": "full-bleed",
+    "hero": "still-split",
+    "figureRadius": "0px",
+    "frame": "hairline"
+  },
+  "accent": {
+    "usage": "reserved"
+  },
+  "renders": {
+    "dividersMin": 3,
+    "flowDiagram": {
+      "required": false,
+      "whenStagesAtLeast": 3
+    },
+    "toolsOffHome": [
+      {
+        "key": "savings-calculator",
+        "exceptSalesModels": [
+          "online-only"
+        ],
+        "selector": "[data-tool=\"savings-calculator\"]",
+        "headingPattern": "run your own numbers|savings calculator|calculate your savings|see your savings|work out (your|the) numbers"
+      },
+      {
+        "key": "pricing-comparison",
+        "exceptSalesModels": [
+          "online-only"
+        ],
+        "selector": "[data-tool=\"pricing-comparison\"]",
+        "headingPattern": "compare the ways to pay|ways to pay|compare (plans|pricing|payment)|pricing (table|comparison)|payment options"
+      }
+    ],
+    "toolRoutes": [
+      "/offer",
+      "/contact"
+    ],
+    "band": {
+      "sections": {
+        "min": 12,
+        "max": 26
+      },
+      "heightPx": {
+        "min": 6300,
+        "max": 18000
+      },
+      "viewport": 1440,
+      "derivedFrom": "house default, no reference page measured for this style yet | RULING 2026-09-30: the home screen budget in layouts/archetypes.json (9 screens at a 900px viewport, 8100px) is the binding ceiling, so the height floor is the house floor of 6300px (7 screens) rather than a figure that no page inside the budget could reach. The budget comes from Tobias's complaint that home pages were too long; this minimum did not. | RULING 2026-09-30: the home screen budget in layouts/archetypes.json (9 screens at a 900px viewport, 8100px) is the binding ceiling, so the section floor is 12 sections (8100px at the 658px average section height measured on the usa-filtration-group home, 9874px over 15 sections) rather than a figure that no page inside the budget could reach. The budget comes from Tobias's complaint that home pages were too long; this minimum did not."
+    }
+  },
+  "shapes": {
+    "family": "arches",
+    "primitives": [
+      "ArchMedia",
+      "Bleed",
+      "OverlapFigure"
+    ],
+    "density": "medium",
+    "video": {
+      "treatments": [
+        "shaped",
+        "behind-type"
+      ],
+      "shape": "arch",
+      "minMomentsBelowFold": 2
+    },
+    "scrim": {
+      "kind": "gradient",
+      "anchor": "bottom",
+      "tint": "shadow",
+      "maxCoverage": 0.38,
+      "minSaturationRetained": 0.65
+    }
+  }
+}

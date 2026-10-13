@@ -3,21 +3,30 @@ import { display, body } from "./fonts";
 import "./globals.css";
 import "./brand.css";
 import { siteRobotsMeta } from "@/lib/siteUrl";
+import { Header, Footer } from "@/components/sections";
+import StickyCallBar from "@/components/motion/StickyCallBar";
+import {
+  COMPANY,
+  PHONE,
+  PHONE_HREF,
+  PHONE_LABEL,
+  EMAIL,
+  HOURS,
+  CTA_HREF,
+  CTA_LABEL,
+  NAV_LINKS,
+  LEARN_LINKS,
+  FOOTER_LINKS,
+  CERTIFICATION,
+  CITIES,
+  UNINCORPORATED,
+} from "@/lib/content";
 
-/* The house look loads two faces: a display face for headings and a plain sans
-   for body. ./fonts.ts names which families: the seed's own default there, or
-   the client's style faces once bin/stitch-brand-from-facts.mjs --css-out has
-   overwritten it. The scale and weights in globals.css do not change with the
-   face, because the scale is what the house-look gate measures. */
-
-/* ROBOTS. `robots: siteRobotsMeta()` puts noindex on EVERY page while the site is on a
-   test URL (no NEXT_PUBLIC_SITE_URL, or a vercel.app or local host) and adds nothing once
-   NEXT_PUBLIC_SITE_URL names the client's own domain. The build stage keeps this line when
-   it writes the client's own title and description: a layout without it ships a test
-   deployment that search engines may index (bin/assert-indexing.mjs, gate 23). */
+/* ROBOTS. `robots: siteRobotsMeta()` keeps every page noindex while the site is on a test URL. */
 export const metadata: Metadata = {
-  title: "Client Site Seed",
-  description: "Placeholder metadata. The build stage replaces this with the client's own copy.",
+  title: "Desert Bloom Water Solutions | Coachella Valley Water Systems",
+  description:
+    "The K8 combines filtration with electrolysis. Talk with Kara about your water, pricing and financing. Serving 13 Coachella Valley communities.",
   robots: siteRobotsMeta(),
 };
 
@@ -28,7 +37,45 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header
+          companyName={COMPANY}
+          logoSrc="/images/client/logo.png"
+          logoAlt={COMPANY}
+          logoAspect="637/640"
+          logoHeight={64}
+          navLinks={NAV_LINKS}
+          servicesLabel="Learn"
+          servicesLinks={LEARN_LINKS}
+          servicesIndex={0}
+          phone={PHONE}
+          phoneHref={PHONE_HREF}
+          ctaLabel={CTA_LABEL}
+          ctaHref={CTA_HREF}
+        />
+        {children}
+        <Footer
+          companyName={COMPANY}
+          logoSrc="/images/client/logo.png"
+          logoAlt={COMPANY}
+          logoAspect="637/640"
+          logoHeight={96}
+          phone={PHONE}
+          phoneHref={PHONE_HREF}
+          email={EMAIL}
+          navLinks={FOOTER_LINKS}
+          blocks={[
+            { lines: ["Premium home water ionization and filtration in the Coachella Valley."] },
+            { heading: "Hours", lines: [HOURS] },
+            { heading: "Where we serve", lines: [[...CITIES, ...UNINCORPORATED].join(", ")] },
+            { lines: [CERTIFICATION] },
+          ]}
+          legalLine={`© 2026 ${COMPANY}`}
+          ctaLabel={CTA_LABEL}
+          ctaHref={CTA_HREF}
+        />
+        <StickyCallBar phone={PHONE_HREF.replace("tel:", "")} phoneLabel={PHONE_LABEL} quoteHref={CTA_HREF} quoteLabel={CTA_LABEL} />
+      </body>
     </html>
   );
 }

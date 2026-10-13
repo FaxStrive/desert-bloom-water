@@ -1,45 +1,34 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { display, body } from "./fonts";
 import "./globals.css";
+import "./brand.css";
+import { siteRobotsMeta } from "@/lib/siteUrl";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
+/* The house look loads two faces: a display face for headings and a plain sans
+   for body. ./fonts.ts names which families: the seed's own default there, or
+   the client's style faces once bin/stitch-brand-from-facts.mjs --css-out has
+   overwritten it. The scale and weights in globals.css do not change with the
+   face, because the scale is what the house-look gate measures. */
 
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-jakarta",
-  display: "swap",
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-  display: "swap",
-});
-
+/* ROBOTS. `robots: siteRobotsMeta()` puts noindex on EVERY page while the site is on a
+   test URL (no NEXT_PUBLIC_SITE_URL, or a vercel.app or local host) and adds nothing once
+   NEXT_PUBLIC_SITE_URL names the client's own domain. The build stage keeps this line when
+   it writes the client's own title and description: a layout without it ships a test
+   deployment that search engines may index (bin/assert-indexing.mjs, gate 23). */
 export const metadata: Metadata = {
-  title:
-    "Water Ionization & Filtration | Desert Bloom Water Solutions | Palm Springs CA",
-  description:
-    "Enagic K8 ionizer installation in the Coachella Valley. 8 platinum-coated plates, 5-year warranty, $299 installation. Serving Palm Springs, Palm Desert, La Quinta and 11 surrounding communities. Call (760) 812-9119.",
+  title: "Client Site Seed",
+  description: "Placeholder metadata. The build stage replaces this with the client's own copy.",
+  robots: siteRobotsMeta(),
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html
-      lang="en"
-      className={`${playfair.variable} ${jakarta.variable} ${jetbrains.variable}`}
-    >
-      <body className="bg-[#F5EFE3] text-[#1A1A14] antialiased">
-        {children}
-      </body>
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

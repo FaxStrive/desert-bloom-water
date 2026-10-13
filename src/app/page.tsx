@@ -139,8 +139,8 @@ export default function HomePage() {
         body="Water is not the same in every neighborhood or every house. The pipes, the supply and the age of a home all play a part. Before you think about any system, it helps to understand your own water. That is the first thing Kara talks through with you, and the guide below is a good place to start."
         linkLabel="Read the water guide"
         linkHref="/learn/your-water"
-        imageSrc="/images/client/gallery-k8-counter.jpg"
-        imageAlt="The K8 on a kitchen counter beside a glass"
+        imageSrc="/images/client/gallery-glass-hose.jpg"
+        imageAlt="A glass of water beside the K8 hose"
         pictureAspect="4/3"
       />
 
@@ -179,7 +179,7 @@ export default function HomePage() {
       <Process
         tone="light"
         eyebrow="WHAT HAPPENS NEXT"
-        headline={<>Three steps, <em>in this order</em>.</>}
+        headline={<span className="block text-5xl lg:text-7xl">Three steps, <em>in this order</em>.</span>}
         steps={[
           {
             title: "A personal conversation",
@@ -233,12 +233,12 @@ export default function HomePage() {
         body="Kara Contreras meets each person personally. She starts with your water and the options available, answers your questions, and then reviews pricing and financing with you. You are not handed a brochure and left to decide alone."
         ctaLabel="Send a message"
         ctaHref="/contact"
-        imageSrc="/images/client/origin-k8.jpg"
-        imageAlt="The K8 hose and the front of the unit on a kitchen counter"
+        imageSrc="/images/stock/header-kitchen-island.jpg"
+        imageAlt="A bright kitchen island in a desert home"
         pictureAspect="4/3"
       />
 
-      <Faq headline="Questions people ask first" items={faqItems} />
+      <Faq variant="two-column" headline="Questions people ask first" items={faqItems} />
 
       <Bleed
         side="right"
@@ -246,12 +246,13 @@ export default function HomePage() {
         eyebrow="THE VALLEY"
         headline={<>Across the <em>Coachella Valley</em>.</>}
         body="Desert Bloom serves Greater Palm Springs and the surrounding communities in Riverside County. The full list follows."
-        imageSrc="/images/client/service-k8-front.jpg"
-        imageAlt="The front of the K8 unit"
+        imageSrc="/images/stock/band-faucet-marble.jpg"
+        imageAlt="A faucet over a marble counter"
       />
 
       <ServiceAreas
-        variant="columns"
+        variant="cards"
+        figure={{ src: "/images/client/install-5.jpg", alt: "A Desert Bloom installation" }}
         tone="alt"
         eyebrow="WHERE WE SERVE"
         headline={<>Thirteen <em>communities</em>.</>}
@@ -264,7 +265,10 @@ export default function HomePage() {
       />
 
       <ClosingCta
-        variant="quiet"
+        variant="split"
+        posterSrc="/images/client/gallery-jar.jpg"
+        posterAlt="A jar of water on a counter"
+        mediaFlush
         headline="Start with a conversation about your water."
         subhead="Installation $299. Financing is available."
         primaryCtaLabel={CTA_LABEL}

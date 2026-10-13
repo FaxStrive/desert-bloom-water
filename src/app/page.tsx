@@ -13,7 +13,7 @@ import {
   ServiceAreas,
   ClosingCta,
 } from "@/components/sections";
-import { ArchSeam } from "@/components/shapes";
+import { OverlapFigure, ArchSeam, Bleed } from "@/components/shapes";
 import { VideoBehindType } from "@/components/video";
 import JsonLd, { faqSchema } from "@/components/JsonLd";
 import {
@@ -130,6 +130,10 @@ export default function HomePage() {
         pictureAspect="4/3"
       />
 
+      <ArchSeam into="alt" />
+
+      <OverlapFigure variant="numeral" numeral="8" numeralLabel="platinum-coated titanium plates" />
+
       <ArchVideoFeature
         tone="alt"
         eyebrow="HOW IT WORKS"
@@ -219,13 +223,22 @@ export default function HomePage() {
 
       <Faq variant="two-column" headline="Questions people ask first" items={faqItems} />
 
+      <Bleed
+        side="right"
+        tone="light"
+        eyebrow="THE VALLEY"
+        headline={<>Across the <em>Coachella Valley</em>.</>}
+        body="Desert Bloom serves Greater Palm Springs and the surrounding communities in Riverside County, from Palm Springs to Indio Hills."
+        imageSrc="/images/stock/header-tumbler-wood.jpg"
+        imageAlt="A glass of water on a wooden table"
+      />
+
       <ServiceAreas
         variant="cards"
         tone="alt"
         eyebrow="WHERE WE SERVE"
-        headline={<>Across the <em>Coachella Valley</em>.</>}
-        coverageNote="Desert Bloom serves Greater Palm Springs and the surrounding communities in Riverside County."
-        intro="Thirteen communities in all, from Palm Springs to Indio Hills. Cities are listed first, then the unincorporated communities."
+        headline="Thirteen communities."
+        intro="Cities are listed first, then the unincorporated communities."
         areas={[
           { name: "Cities", places: CITIES },
           { name: "Unincorporated communities", places: UNINCORPORATED },

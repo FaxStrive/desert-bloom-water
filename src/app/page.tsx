@@ -4,7 +4,7 @@ import {
   WhySystems,
   Systems,
   StatOverImage,
-  InfoBand,
+  RuledList,
   WaterHook,
   ArchVideoFeature,
   Process,
@@ -102,8 +102,8 @@ export default function HomePage() {
             name: "Enagic K8",
             description:
               "Eight platinum-coated titanium plates, advanced filtration and multiple water options in one unit. Backed by a 5-year warranty.",
-            imageSrc: "/images/client/install-4.jpg",
-            imageAlt: "The K8 unit, close view of the display",
+            imageSrc: "/images/client/origin-k8.jpg",
+            imageAlt: "Close view of the K8 display and hose",
             ctaLabel: "How the K8 works",
             ctaHref: "/learn/how-it-works",
           },
@@ -112,24 +112,24 @@ export default function HomePage() {
 
       <StatOverImage
         fullBleed
-        imageSrc="/images/stock/stat-glass-table.jpg"
-        imageAlt="A glass of water on a white table in soft light"
+        imageSrc="/images/stock/header-pour-glass.jpg"
+        imageAlt="Water pouring into a glass"
         stat="5 years"
         statLabel="warranty on the K8"
-                maxHeight={300}
+        maxHeight={460}
+        focus="50% 55%"
       />
 
-      <InfoBand
+      <RuledList
         tone="alt"
-        density="base"
-        itemStyle="plain"
-        headline="What is on the table"
+        eyebrow="THE CONVERSATION"
+        headline={<>What is <em>on the table</em></>}
         intro="Before any decision, this is what you get from the conversation."
         items={[
-          "A personal conversation about your water.",
-          "A K8 with a 5-year warranty.",
-          "Financing, available and reviewed with you personally.",
-          "Installation, arranged afterward.",
+          { title: "A personal conversation about your water." },
+          { title: "A K8 with a 5-year warranty." },
+          { title: "Financing, available and reviewed with you personally." },
+          { title: "Installation, arranged afterward." },
         ]}
       />
 
@@ -139,8 +139,8 @@ export default function HomePage() {
         body="Water is not the same in every neighborhood or every house. The pipes, the supply and the age of a home all play a part. Before you think about any system, it helps to understand your own water. That is the first thing Kara talks through with you, and the guide below is a good place to start."
         linkLabel="Read the water guide"
         linkHref="/learn/your-water"
-        imageSrc="/images/client/gallery-glass-hose.jpg"
-        imageAlt="A glass of water beside the K8 hose"
+        imageSrc="/images/stock/header-water-macro.jpg"
+        imageAlt="Water pouring into a glass, close view"
         pictureAspect="4/3"
       />
 
@@ -215,7 +215,8 @@ export default function HomePage() {
         posterAlt="A chrome faucet with a slow drip"
         headline="Premium, education-first, focused on quality, technology, and wellness."
         anchor="bottom"
-        minHeight={320}
+        tint="shadow"
+        minHeight={440}
       >
         <p>
           <a href="/contact" className="font-semibold" style={{ color: "var(--color-accent-text-on-dark)" }}>
@@ -238,7 +239,7 @@ export default function HomePage() {
         pictureAspect="4/3"
       />
 
-      <Faq variant="two-column" headline="Questions people ask first" items={faqItems} />
+      <Faq variant="two-column" headline="Questions people ask first" items={faqItems} figure={{ src: "/images/client/gallery-glass-hose.jpg", alt: "A glass of water beside the K8 hose" }} />
 
       <Bleed
         side="right"
@@ -246,13 +247,13 @@ export default function HomePage() {
         eyebrow="THE VALLEY"
         headline={<>Across the <em>Coachella Valley</em>.</>}
         body="Desert Bloom serves Greater Palm Springs and the surrounding communities in Riverside County. The full list follows."
-        imageSrc="/images/stock/band-faucet-marble.jpg"
-        imageAlt="A faucet over a marble counter"
+        imageSrc="/images/stock/header-tumbler-wood.jpg"
+        imageAlt="A glass of water on a wooden table"
       />
 
       <ServiceAreas
         variant="cards"
-        figure={{ src: "/images/client/install-5.jpg", alt: "A Desert Bloom installation" }}
+        figure={{ src: "/images/stock/header-faucet-granite.jpg", alt: "A kitchen tap running into a sink" }}
         tone="alt"
         eyebrow="WHERE WE SERVE"
         headline={<>Thirteen <em>communities</em>.</>}

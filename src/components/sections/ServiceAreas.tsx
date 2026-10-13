@@ -166,7 +166,7 @@ export default function ServiceAreas({
         ) : (
           head
         )}
-        <div className="grid grid-cols-1 gap-4 sm:gap-8 md:grid-cols-3">
+        <div className={`grid grid-cols-1 gap-4 sm:gap-8 ${items.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"}`}>
           {items.map((area) => (
             <div
               key={area.name}

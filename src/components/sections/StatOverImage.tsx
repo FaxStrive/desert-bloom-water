@@ -61,6 +61,8 @@ export interface StatOverImageProps {
   /** fullBleed only: the tallest the band stands at a wide viewport, in px. Default 620. The band
    *  is still 420px on a phone. A page that cannot afford 620px asks for less. Added 2026-10-02. */
   maxHeight?: number;
+  /** fullBleed only: CSS object-position for the crop, e.g. "50% 62%". */
+  focus?: string;
 }
 
 export default function StatOverImage({
@@ -74,6 +76,7 @@ export default function StatOverImage({
   eyebrow,
   line,
   maxHeight = 620,
+  focus,
 }: StatOverImageProps) {
   if (!stat) {
     return null;
@@ -102,6 +105,8 @@ export default function StatOverImage({
             alt={imageAlt}
             fill
             sizes="100vw"
+            quality={92}
+            style={focus ? { objectPosition: focus } : undefined}
             wrapperClassName="absolute inset-0"
             aspect="16/7"
           />

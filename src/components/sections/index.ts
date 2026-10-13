@@ -17,3 +17,4 @@ export { default as InfoBand } from "./InfoBand";
 export { default as StatOverImage } from "./StatOverImage";
 export { default as ArchVideoFeature } from "./ArchVideoFeature";
 export { default as ContactConversation } from "./ContactConversation";
+export { default as RuledList } from "./RuledList";

@@ -14,6 +14,7 @@
 // link under the rows, for the short lead-in set of questions on a home page
 // that has to point at the page carrying the rest.
 
+import Figure from "./Figure";
 import { useId, useState } from "react";
 import type { ReactNode } from "react";
 
@@ -39,6 +40,8 @@ export interface FaqProps {
   linkLabel?: string;
   linkHref?: string;
   variant?: FaqVariant;
+  /** two-column only: an anchor picture under the heading. */
+  figure?: { src: string; alt: string };
 }
 
 export function FaqRow({ item }: { item: FaqItem }) {
@@ -89,6 +92,7 @@ export default function Faq({
   linkLabel,
   linkHref,
   variant = "list",
+  figure,
 }: FaqProps) {
   const rows = items.filter((item) => Boolean(item.question) && Boolean(item.answer));
 
@@ -125,7 +129,12 @@ export default function Faq({
     return (
       <section className="section" data-density="dense">
         <div className="shell grid grid-cols-1 gap-x-16 gap-y-10 lg:grid-cols-12">
-          <div className="lg:col-span-4">{head}</div>
+          <div className="flex flex-col gap-10 lg:col-span-4">
+            {head}
+            {figure ? (
+              <Figure src={figure.src} alt={figure.alt} fill sizes="(max-width: 1024px) 100vw, 33vw" wrapperClassName="relative hidden w-full lg:block" aspect="4/5" />
+            ) : null}
+          </div>
           <div className="lg:col-span-8">{accordion}</div>
         </div>
       </section>

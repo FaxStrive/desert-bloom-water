@@ -40,6 +40,7 @@ export interface VideoBehindTypeProps {
   body?: string;
   anchor?: ScrimAnchor;
   tint?: ScrimTint;
+  strength?: number;
   minHeight?: number;
   children?: ReactNode;
 }
@@ -53,6 +54,7 @@ export default function VideoBehindType({
   body,
   anchor = "bottom",
   tint = "brand",
+  strength,
   minHeight = 480,
   children,
 }: VideoBehindTypeProps) {
@@ -62,7 +64,7 @@ export default function VideoBehindType({
     setAllowVideo(!window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   }, []);
 
-  const scrim = gradientScrim({ anchor, tint });
+  const scrim = gradientScrim({ anchor, tint, strength });
 
   const alignItems = anchor === "top" ? "flex-start" : anchor === "bottom" ? "flex-end" : "center";
   const justifyContent = anchor === "left" ? "flex-start" : anchor === "right" ? "flex-end" : "flex-start";

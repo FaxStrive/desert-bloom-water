@@ -13,7 +13,7 @@ import {
   ServiceAreas,
   ClosingCta,
 } from "@/components/sections";
-import { OverlapFigure, ArchSeam, Bleed } from "@/components/shapes";
+import { ArchSeam } from "@/components/shapes";
 import { VideoBehindType } from "@/components/video";
 import JsonLd, { faqSchema } from "@/components/JsonLd";
 import {
@@ -82,7 +82,7 @@ export default function HomePage() {
         variant="split-statement"
         tone="alt"
         eyebrow="WHY THE K8"
-        headline={<>More than a <em>filter</em>.</>}
+        headline={<>More than a filter.</>}
         subhead="Bottled water is something you buy again and again. A standard filter does one job. The K8 takes a different route. It combines filtration with electrolysis, so the water you pour at home has been through both steps. Kara explains each one in plain words, with no pressure to decide."
         reasons={[
           { title: "Filtration", body: "Advanced filtration is the first thing the water meets inside the K8." },
@@ -95,7 +95,7 @@ export default function HomePage() {
         variant="alternating-rows"
         tone="light"
         eyebrow="THE K8"
-        headline={<>Eight plates, <em>one</em> unit.</>}
+        headline={<>Eight plates, one unit.</>}
         systems={[
           {
             name: "Enagic K8",
@@ -130,19 +130,10 @@ export default function HomePage() {
         pictureAspect="4/3"
       />
 
-      <ArchSeam into="alt" />
-
-      <OverlapFigure
-        variant="figure"
-        imageSrc="/images/client/install-2.jpg"
-        imageAlt="A glass in front of the K8 unit with a houseplant beside it"
-      >
-      </OverlapFigure>
-
       <ArchVideoFeature
         tone="alt"
         eyebrow="HOW IT WORKS"
-        headline={<>Two steps, <em>in order</em>.</>}
+        headline={<>Two steps, in order.</>}
         steps={[
           {
             title: "Filtration",
@@ -165,7 +156,7 @@ export default function HomePage() {
       <Process
         tone="light"
         eyebrow="WHAT HAPPENS NEXT"
-        headline={<span className="block text-5xl lg:text-7xl">Three steps, <em>in this order</em>.</span>}
+        headline={<span className="block text-5xl lg:text-7xl">Three steps, in this order.</span>}
         steps={[
           {
             title: "A personal conversation",
@@ -199,9 +190,10 @@ export default function HomePage() {
         videoSrc="/video/glass-band.mp4"
         posterSrc="/images/stock/glass-band-poster.jpg"
         posterAlt="A chrome faucet with a slow drip"
-        headline="Premium, education-first, focused on quality, technology, and wellness."
+        headline={<>Premium, <span style={{ whiteSpace: "nowrap" }}>education-first</span>, focused on quality, technology, and wellness.</>}
         anchor="bottom"
         tint="shadow"
+        strength={0.9}
         minHeight={440}
       >
         <p>
@@ -216,7 +208,7 @@ export default function HomePage() {
       <OriginStory
         tone="light"
         eyebrow="YOUR CONVERSATION"
-        headline={<>You speak to <em>one person</em>.</>}
+        headline={<>You speak to one person.</>}
         body="Kara Contreras meets each person personally. She starts with your water and the options available, answers your questions, and then reviews pricing and financing with you. You are not handed a brochure and left to decide alone."
         ctaLabel="Send a message"
         ctaHref="/contact"
@@ -225,24 +217,15 @@ export default function HomePage() {
         pictureAspect="4/3"
       />
 
-      <Faq variant="two-column" headline="Questions people ask first" items={faqItems} figure={{ src: "/images/client/gallery-glass-hose.jpg", alt: "A glass of water beside the K8 hose" }} />
-
-      <Bleed
-        side="right"
-        tone="light"
-        eyebrow="THE VALLEY"
-        headline={<>Across the <em>Coachella Valley</em>.</>}
-        body="Desert Bloom serves Greater Palm Springs and the surrounding communities in Riverside County."
-        imageSrc="/images/stock/header-tumbler-wood.jpg"
-        imageAlt="A glass of water on a wooden table"
-      />
+      <Faq variant="two-column" headline="Questions people ask first" items={faqItems} />
 
       <ServiceAreas
         variant="cards"
-        figure={{ src: "/images/stock/header-faucet-granite.jpg", alt: "A kitchen tap running into a sink" }}
         tone="alt"
         eyebrow="WHERE WE SERVE"
-        headline={<>Thirteen <em>communities</em>.</>}
+        headline={<>Across the <em>Coachella Valley</em>.</>}
+        coverageNote="Desert Bloom serves Greater Palm Springs and the surrounding communities in Riverside County."
+        intro="Thirteen communities in all, from Palm Springs to Indio Hills. Cities are listed first, then the unincorporated communities."
         areas={[
           { name: "Cities", places: CITIES },
           { name: "Unincorporated communities", places: UNINCORPORATED },
@@ -253,8 +236,8 @@ export default function HomePage() {
 
       <ClosingCta
         variant="split"
-        posterSrc="/images/client/gallery-jar.jpg"
-        posterAlt="A jar of water on a counter"
+        posterSrc="/images/stock/stat-glass-table.jpg"
+        posterAlt="A glass of water on a table"
         mediaFlush
         headline="Start with a conversation about your water."
         subhead="Installation $299. Financing is available."
